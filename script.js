@@ -12,7 +12,7 @@ function iniciar(){
     mundo = new MundoAR();
     contextoAR = new ContextoAR(mundo);
     //mundo.iluminar();
-    mundo.iluminarConFoto('./hdr/fondo.png',false);
+    mundo.iluminarConFoto('./hdr/fondoRedu.png',false);
 
 
 
