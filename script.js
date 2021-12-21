@@ -9,6 +9,7 @@ var modelos = [];
 var contextoAR;
 
 function iniciar(){
+	console.log("V2");
     mundo = new MundoAR();
     contextoAR = new ContextoAR(mundo);
     //mundo.iluminar();
