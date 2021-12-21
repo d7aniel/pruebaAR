@@ -5,7 +5,9 @@ export class ContextoAR{
         this.mundo = mundo;
         //------- AR Toolkit Source, es decir lo que la camara ve
         this.arToolkitSource = new THREEx.ArToolkitSource({
-            sourceType : 'webcam'
+            sourceType : 'webcam',            
+            sourceWidth: 480,
+            sourceHeight: 640,
         });
         //--- El source se inicializa en un proceso por separado
         var tmpresize = this.onResize;
@@ -30,7 +32,12 @@ export class ContextoAR{
         //-------- AR Toolkit Context
         this.arToolkitContext = new THREEx.ArToolkitContext({
             cameraParametersUrl: THREEx.ArToolkitContext.baseURL + 'camera_para.dat',
-            detectionMode: 'mono'
+            detectionMode: 'mono',
+            canvasWidth: 480,
+            canvasHeight: 640,
+        }, {
+            sourceWidth: 480,
+            sourceHeight: 640,
         });
         //-- inicializar
         var tmparToolkitContext = this.arToolkitContext;
