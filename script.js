@@ -43,7 +43,7 @@ function iniciar(){
     descriptor.add( modelos[0] );*/
 
     modelos[0] = new THREE.Object3D();
-    cargarModelo('./modelo/modeloLD.glb',descriptor,modelos[0]);
+    cargarModelo('./modelo/ARBOL.glb',descriptor,modelos[0]);
     modelos[0].scale.x=35
     modelos[0].scale.y=35
     modelos[0].scale.z=35
