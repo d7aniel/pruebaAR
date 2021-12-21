@@ -47,9 +47,9 @@ function iniciar(){
     modelos[0].scale.x=35
     modelos[0].scale.y=35
     modelos[0].scale.z=35
-    modelos[0].position.z-= 80;
-    modelos[0].position.x+= 60;
-    modelos[0].position.y+= 17.5;
+    //modelos[0].position.z-= 80;
+    //modelos[0].position.x+= 60;
+    //modelos[0].position.y+= 17.5;
 /*
     var vidrio = new THREE.MeshPhysicalMaterial( {
         color: 0xffffff,
