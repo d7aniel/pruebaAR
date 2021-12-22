@@ -10,7 +10,7 @@ var posiciones = [];
 var contextoAR;
 var descriptor;
 function iniciar(){
-	console.log("V6");
+	console.log("V7");
     mundo = new MundoAR();
     contextoAR = new ContextoAR(mundo);
     //mundo.iluminar();
@@ -106,12 +106,13 @@ function iniciar(){
     modelos[4] = new THREE.Mesh( geometriaEsfera, material );
     modelos[4].position.y-=1.5;
     mundo.escena.add( modelos[4] );*/
-	console.log(descriptor)
 }
 
 function animar(){
     requestAnimationFrame(animar);
-	//console.log(posiciones[0].visible);
+	
+	console.log(descriptor.visible)
+	console.log(descriptor.position.x);
 	//console.log(descriptor);
 	 modelos[0].position.lerp(posiciones[0].position,0.2);
 	 modelos[0].quaternion.slerp(posiciones[0].quaternion,0.2);
