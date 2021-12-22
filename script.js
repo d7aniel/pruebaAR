@@ -10,7 +10,7 @@ var posiciones = [];
 var contextoAR;
 
 function iniciar(){
-	console.log("V4");
+	console.log("V5");
     mundo = new MundoAR();
     contextoAR = new ContextoAR(mundo);
     //mundo.iluminar();
