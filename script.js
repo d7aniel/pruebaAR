@@ -6,6 +6,7 @@ import {cargarModelo} from './CargarModelo.js';
 
 var mundo;
 var modelos = [];
+var posiciones = [];
 var contextoAR;
 
 function iniciar(){
@@ -44,7 +45,8 @@ function iniciar(){
     descriptor.add( modelos[0] );*/
 
     modelos[0] = new THREE.Object3D();
-    cargarModelo('./modelo/ARBOL.glb',descriptor,modelos[0]);
+	posiciones[0] = new THREE.Object3D();
+    cargarModelo('./modelo/ARBOL.glb',descriptor,posiciones[0],modelos[0]);
     modelos[0].scale.x=35
     modelos[0].scale.y=35
     modelos[0].scale.z=35
@@ -106,6 +108,8 @@ function iniciar(){
 
 function animar(){
     requestAnimationFrame(animar);
+	 modelos[0].position.lerp(posicion[0].position,0.2);
+	 modelos[0].rotation.lerp(posicion[0].rotation,0.2);
     /*for(var i=0;i<1;i++){
         modelos[i].rotation.y+=0.01;
         modelos[i].rotation.x+=0.001;
