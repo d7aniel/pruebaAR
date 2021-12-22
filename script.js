@@ -10,7 +10,7 @@ var posiciones = [];
 var contextoAR;
 var descriptor;
 function iniciar(){
-	console.log("V9");
+	console.log("V10");
     mundo = new MundoAR();
     contextoAR = new ContextoAR(mundo);
     //mundo.iluminar();
@@ -122,8 +122,8 @@ function animar(){
     }*/
     contextoAR.actualizar();
 	modelos[0].visible = descriptor.visible;
-	 modelos[0].position.lerp(descriptor.position,0.2);
-	 modelos[0].quaternion.slerp(descriptor.quaternion,0.2);
+	 modelos[0].position.lerp(descriptor.position,0.5);
+	 modelos[0].quaternion.slerp(descriptor.quaternion,0.5);
     mundo.dibujar();
 }
 
