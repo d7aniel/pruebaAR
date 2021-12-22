@@ -8,9 +8,9 @@ var mundo;
 var modelos = [];
 var posiciones = [];
 var contextoAR;
-
+var descriptor;
 function iniciar(){
-	console.log("V5");
+	console.log("V6");
     mundo = new MundoAR();
     contextoAR = new ContextoAR(mundo);
     //mundo.iluminar();
@@ -34,7 +34,7 @@ function iniciar(){
 
 
 
-    var descriptor = contextoAR.crearDescriptor('descriptor/cara');
+    descriptor = contextoAR.crearDescriptor('descriptor/cara');
 
     /*var geometriaCubo = new THREE.BoxBufferGeometry( 75, 75, 75 );
     var material = new THREE.MeshStandardMaterial( {color: 0xffffff*Math.random(0), roughness: 1, metalness: 0} );
@@ -106,12 +106,13 @@ function iniciar(){
     modelos[4] = new THREE.Mesh( geometriaEsfera, material );
     modelos[4].position.y-=1.5;
     mundo.escena.add( modelos[4] );*/
+	console.log(descriptor)
 }
 
 function animar(){
     requestAnimationFrame(animar);
-	console.log(posiciones[0].visible);
-	console.log(posiciones[0].position.x);
+	//console.log(posiciones[0].visible);
+	//console.log(descriptor);
 	 modelos[0].position.lerp(posiciones[0].position,0.2);
 	 modelos[0].quaternion.slerp(posiciones[0].quaternion,0.2);
     /*for(var i=0;i<1;i++){
