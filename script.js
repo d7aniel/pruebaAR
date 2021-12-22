@@ -50,6 +50,8 @@ function iniciar(){
     modelos[0].scale.x=35
     modelos[0].scale.y=35
     modelos[0].scale.z=35
+
+	mundo.escena.add(modelos[0])
     //modelos[0].position.z-= 80;
     //modelos[0].position.x+= 60;
     //modelos[0].position.y+= 17.5;
@@ -108,6 +110,8 @@ function iniciar(){
 
 function animar(){
     requestAnimationFrame(animar);
+	console.log(posiciones[0].visible);
+	console.log(posiciones[0].position.x);
 	 modelos[0].position.lerp(posiciones[0].position,0.2);
 	 modelos[0].quaternion.slerp(posiciones[0].quaternion,0.2);
     /*for(var i=0;i<1;i++){
